@@ -1,4 +1,8 @@
 export default class User {
-  loginUser() {}
-  updatePassword() {}
+  loginUser(password: string): Boolean {
+    return true;
+  }
+  updatePassword(password: string): Boolean {
+    return true;
+  }
 }

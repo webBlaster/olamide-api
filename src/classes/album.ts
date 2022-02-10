@@ -1,6 +1,14 @@
 export default class Album {
-  createAlbum() {}
-  getAlbum() {}
-  deleteAlbum() {}
-  getAllAlbums() {}
+  createAlbum(album: any): Boolean {
+    return true;
+  }
+  getAlbum(id: string): any {
+    return {};
+  }
+  deleteAlbum(id: string): Boolean {
+    return true;
+  }
+  getAllAlbums(): string[] {
+    return [];
+  }
 }
