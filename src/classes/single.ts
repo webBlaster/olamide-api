@@ -1,4 +1,4 @@
-export default class Single {
+export default class SingleService {
   createSingle(single: any): Boolean {
     return true;
   }

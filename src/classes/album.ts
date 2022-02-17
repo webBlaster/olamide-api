@@ -1,4 +1,4 @@
-export default class Album {
+export default class AlbumService {
   createAlbum(album: any): Boolean {
     return true;
   }

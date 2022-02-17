@@ -1,6 +1,7 @@
 import { Model } from "sequelize";
+
 module.exports = (sequelize: any, DataTypes: { STRING: any }) => {
-  class User extends Model {
+  class Album extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -10,14 +11,17 @@ module.exports = (sequelize: any, DataTypes: { STRING: any }) => {
       // define association here
     }
   }
-  User.init(
+  Album.init(
     {
-      password: DataTypes.STRING,
+      title: DataTypes.STRING,
+      img_url: DataTypes.STRING,
+      public_id: DataTypes.STRING,
+      link: DataTypes.STRING,
     },
     {
       sequelize,
-      modelName: "User",
+      modelName: "Album",
     }
   );
-  return User;
+  return Album;
 };

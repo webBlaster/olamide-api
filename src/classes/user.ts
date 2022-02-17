@@ -1,8 +1,13 @@
-export default class User {
-  loginUser(password: string): Boolean {
+import db from "../models";
+
+let { User } = db;
+export default class UserService {
+  async loginUser(password: string) {
+    let result = await User.findOne({ query: { password: password } });
+    if (result !== 1) return false;
     return true;
   }
-  updatePassword(password: string): Boolean {
+  async updatePassword(password: string) {
     return true;
   }
 }
