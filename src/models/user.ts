@@ -1,4 +1,5 @@
 import { Model } from "sequelize";
+
 module.exports = (sequelize: any, DataTypes: { STRING: any }) => {
   class User extends Model {
     /**
@@ -12,7 +13,9 @@ module.exports = (sequelize: any, DataTypes: { STRING: any }) => {
   }
   User.init(
     {
-      password: DataTypes.STRING,
+      password: {
+        type: DataTypes.STRING,
+      },
     },
     {
       sequelize,

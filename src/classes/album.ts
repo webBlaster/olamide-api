@@ -1,14 +1,17 @@
+import db from "../models";
+
+const { Album } = db;
 export default class AlbumService {
-  createAlbum(album: any): Boolean {
+  createAlbum(album: any) {
     return true;
   }
-  getAlbum(id: string): any {
+  getAlbum(id: number) {
     return {};
   }
-  deleteAlbum(id: string): Boolean {
+  deleteAlbum(id: number) {
     return true;
   }
-  getAllAlbums(): string[] {
+  getAllAlbums() {
     return [];
   }
 }
