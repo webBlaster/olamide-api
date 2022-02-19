@@ -1,7 +1,9 @@
 import "dotenv/config";
 import express, { Request, Response } from "express";
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json("Api version 1.0.0");

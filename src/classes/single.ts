@@ -1,8 +1,9 @@
 import db from "../models";
 
-const { Album } = db;
+const { Single } = db;
 export default class SingleService {
   static createSingle(single: any): Boolean {
+    Single.create({});
     return true;
   }
 

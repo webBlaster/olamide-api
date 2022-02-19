@@ -17,8 +17,9 @@ export default class UserService {
 
   static async loginUser(password: string) {
     let result = (await User.findOne({ where: { id: 1 } })) || "null";
-    if (await bcrypt.compare(password, result.password)) return true;
-    return false;
+    if (!(await bcrypt.compare(password, result.password))) return false;
+    //create expiring tokens
+    return true;
   }
 
   static async updatePassword(id: number, password: string) {
