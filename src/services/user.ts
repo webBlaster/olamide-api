@@ -1,5 +1,5 @@
 import db from "../models";
-import Utils from "../classes/utils";
+import Utils from "../services/utils";
 let bcrypt = require("bcryptjs");
 
 let { User } = db;
