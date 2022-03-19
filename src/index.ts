@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
-  res.status(200).json("Api version 1.0.0");
+  res.status(200).json("Api Version 1.0.0");
 });
 
 const port: number | any = process.env.PORT || 5000;
